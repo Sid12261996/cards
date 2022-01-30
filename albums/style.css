@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+html, body{
+    margin: 0;
+    padding: 0;
+}
 @font-face {
     font-family: 'super-font';
     src: url(./assets/fonts/SupermercadoOne-Regular.ttf);
@@ -10,10 +14,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     grid-gap: 1rem;
+    padding: 5vw 5vw;
+    background-color: #4158D0;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+
 }
 
 .album{
-    background-color: rgb(163, 94, 160, 0.2);
+    background-color: #d6f8b6;
     /* border: 1px gray solid; */
     border-radius: 8px;
     cursor: pointer;
@@ -40,4 +48,18 @@
     font-family: 'super-font';
     text-align: left ;
     margin-left: 1rem;
+}
+.loader-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    background-color: #4158D0;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    display: flex;
+}
+
+.loader-wrapper > h3{
+    margin: auto;
 }

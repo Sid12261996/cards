@@ -34,14 +34,16 @@ function loadAlbumDom() {
 }
 
 function showLoading() {
+    const div = document.createElement('div');
     const text = document.createElement('h3');
     text.textContent = `Loading ...`;
-    text.className = 'loader';
-    container.append(text);
+    div.className = 'loader-wrapper';
+    div.append(text);
+    container.append(div);
 }
 
 function removeLoader() {
-    const loader = container.querySelector('.loader');
+    const loader = container.querySelector('.loader-wrapper');
     container.removeChild(loader);
 }
 
