@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'super-font';
+    src: url(./assets/fonts/SupermercadoOne-Regular.ttf);
+}
+
+.album-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-gap: 1rem;
+}
+
+.album{
+    background-color: rgb(163, 94, 160, 0.2);
+    /* border: 1px gray solid; */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.album>.image-wrapper{
+    overflow: hidden;
+    transition: 200ms transform ease-in;
+    border: 1px gray solid;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.album img{
+    display: block;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    width: 100%;
+}
+
+.album img:hover{
+    transform: scale(1.025);
+}
+.album>h3{
+    font-family: 'super-font';
+    text-align: left ;
+    margin-left: 1rem;
+}
